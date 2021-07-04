@@ -17,9 +17,6 @@ public class LoginScreenActivity extends AppCompatActivity {
     private Button signInAccount;
     private Button registerNow;
 
-    private final String CHOOSE = "shared_pref";
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +29,7 @@ public class LoginScreenActivity extends AppCompatActivity {
 
         registerNow.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 Intent i = new Intent(LoginScreenActivity.this, SignUpActivity.class);
                 startActivity(i);
             }
@@ -40,16 +37,14 @@ public class LoginScreenActivity extends AppCompatActivity {
 
         signInAccount.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                SharedPreferences verify = getSharedPreferences(CHOOSE, Context.MODE_PRIVATE);
+            public void onClick(View v) {
+                SharedPreferences verify = getSharedPreferences("shared_pref", Context.MODE_PRIVATE);
                 String textName = verify.getString("Username", null);
                 String textpwd = verify.getString("Password", null);
-
                 String originalName = name.getText().toString();
                 String originalPassword = pwd.getText().toString();
 
-                if(textName.equals(originalName)){
-                    if(textpwd.equals(originalPassword)) {        
+                if(textName.equals(originalName) && (textpwd.equals(originalPassword)) {        
                         Intent changePage = new Intent(LoginScreenActivity.this, HomeActivity.class);
                         startActivity(changePage);
                     }
