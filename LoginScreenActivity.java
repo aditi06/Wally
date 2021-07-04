@@ -1,5 +1,4 @@
 package com.example.login;
-
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
@@ -24,7 +23,6 @@ public class LoginScreenActivity extends AppCompatActivity {
         pwd = findViewById(R.id.password);
         signInAccount = findViewById(R.id.login);
         registerNow = findViewById(R.id.register);
-
         registerNow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
