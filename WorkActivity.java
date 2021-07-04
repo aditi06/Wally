@@ -1,7 +1,6 @@
 package com.example.login;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -32,10 +31,7 @@ public class WorkActivity extends AppCompatActivity {
         descriptions = new ArrayList<>();
         recyclerAdapter = new RecyclerAdapter2(workOpportunities, websites, descriptions);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(recyclerAdapter);
-
-        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this, DividerItemDecoration.VERTICAL);
-        recyclerView.addItemDecoration(dividerItemDecoration);
+        recyclerView.setAdapter(recyclerAdapter);   
 
         workOpportunities.add("Customer Service Attendant I - City of Cupertino");
         workOpportunities.add("Sales Engineer at Edmund Optics ");
