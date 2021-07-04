@@ -19,7 +19,7 @@ public class TodoActivity extends AppCompatActivity {
     List<String> toDoList;
     ArrayAdapter<String> a;
     ListView l;
-    EditText editText;
+    EditText e;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,13 +30,13 @@ public class TodoActivity extends AppCompatActivity {
         a = new ArrayAdapter<>(this,R.layout.list_view_layout, toDoList);
         l = findViewById(R.id.id_list_view);
         l.setAdapter(a);
-        editText = findViewById(R.id.id_edit_text);
+        e = findViewById(R.id.id_edit_text);
     }
 
-    public void addItemToList(View v){
-        toDoList.add(editText.getText().toString());
+    public void add(View v){
+        toDoList.add(e.getText().toString());
+        e.setText("");
         a.notifyDataSetChanged();
 
-        editText.setText("");
     }
 }
