@@ -12,10 +12,8 @@ import android.content.Context;
 
 public class LoginScreenActivity extends AppCompatActivity {
 
-    private EditText name;
-    private EditText pwd;
-    private Button signInAccount;
-    private Button registerNow;
+    private EditText name, pwd;
+    private Button signInAccount,registerNow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
