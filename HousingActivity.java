@@ -13,25 +13,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HousingActivity extends AppCompatActivity {
-    RecyclerView recyclerView;
-    RecyclerAdapter recyclerAdapter;
+    RecyclerView rv;
+    RecyclerAdapter ra;
 
-    List<String> shelterLocations;
-    List<String> descriptions;
-    List<String> websites;
+    List<String> shelterLocations, descriptions,websites;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_housing);
         getSupportActionBar().setTitle("Wally");
-        recyclerView = findViewById(R.id.recyclerview);
+        rv = findViewById(R.id.recyclerview);
         shelterLocations = new ArrayList<>();
         descriptions = new ArrayList<>();
         websites = new ArrayList<>();
-        recyclerAdapter = new RecyclerAdapter(shelterLocations, websites, descriptions);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(recyclerAdapter);
+        ra = new RecyclerAdapter(shelterLocations, websites, descriptions);
+        rv.setLayoutManager(new LinearLayoutManager(this));
+        rv.setAdapter(ra);
 
         shelterLocations.add("The Family Giving Tree");
         shelterLocations.add("HomeFirst Services");
