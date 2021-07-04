@@ -20,6 +20,7 @@ public class TodoActivity extends AppCompatActivity {
     ArrayAdapter<String> a;
     ListView l;
     EditText e;
+   
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
