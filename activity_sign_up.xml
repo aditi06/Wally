@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="40sp"
+    android:orientation="vertical"
+    tools:context=".SignUpActivity">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100sp"
+        android:gravity="center"
+        android:text="REGISTER"
+        android:textColor="#2e8b57"
+        android:textSize="50sp" />
+
+    <EditText
+        android:id="@+id/nameofuser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:layout_marginBottom = "40sp"
+        android:hint="Username" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint = "Password"
+        android:layout_marginBottom = "40sp"
+        android:inputType="textPassword"
+         />
+
+    <EditText
+        android:id="@+id/passwordConfirmation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint = "Confirm Password"
+        android:layout_marginBottom = "40sp"
+        android:inputType="textPassword"
+        />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize = "12sp"
+        android:textColor = "#2e8b57"
+        android:text="By clicking Sign Up, I confirm that I have read and agree to the user agreement and policies." />
+    <Button
+        android:id="@+id/makeAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="65sp"
+        android:text = "SIGN UP"
+        android:layout_gravity="center"
+        android:layout_marginTop = "8sp"
+        android:textColor = "@color/white"
+        android:textSize = "28sp"
+        android:backgroundTint="#2e8b57"
+        />
+
+
+</LinearLayout>
