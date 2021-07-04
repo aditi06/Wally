@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation = "vertical"
+    android:padding = "35dp"
+
+    tools:context=".HomeActivity">
+
+
+    <ImageView
+        android:layout_width="200sp"
+        android:layout_height="150sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:src="@drawable/wally_logo" />
+
+    <Button
+        android:id="@+id/button_house"
+        android:layout_width="433dp"
+        android:layout_height="59dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#2e8b57"
+        android:text="HOUSING"
+        android:textColor="@color/white"
+        android:textSize="28sp" />
+
+    <Button
+        android:id="@+id/button_work"
+        android:layout_width="452dp"
+        android:layout_height="81dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="8sp"
+        android:backgroundTint="#2e8b57"
+        android:text="JOB OPPORTUNITIES"
+        android:textColor="@color/white"
+        android:textSize="28sp" />
+
+    <Button
+        android:id="@+id/button_todo"
+        android:layout_width="444dp"
+        android:layout_height="85dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="8sp"
+        android:backgroundTint="#2e8b57"
+        android:text="TO DO CHECKLIST"
+        android:textColor="@color/white"
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/button_todo2"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="8sp"
+        android:backgroundTint="#2e8b57"
+        android:text="BUDGET"
+        android:textColor="@color/white"
+        android:textSize="22sp" />
+
+</LinearLayout>
