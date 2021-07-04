@@ -10,7 +10,7 @@ import android.widget.Button;
 public class HomeActivity extends AppCompatActivity {
     private Button buttonHouse;
     private Button buttonWork;
-    private Button buttonToDo;
+    private Button toDo;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +21,7 @@ public class HomeActivity extends AppCompatActivity {
 
         buttonHouse = findViewById(R.id.button_house);
         buttonWork = findViewById(R.id.button_work);
-        buttonToDo = findViewById(R.id.button_todo);
+        toDo = findViewById(R.id.button_todo);
 
         buttonHouse.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,7 +38,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        buttonToDo.setOnClickListener(new View.OnClickListener() {
+        toDo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(HomeActivity.this, TodoActivity.class);
