@@ -11,7 +11,7 @@ import android.content.Context;
 
 public class SignUpActivity extends AppCompatActivity {
 
-    private EditText pwdconfirm;
+    private EditText confirm;
     private EditText enterName;
     private final String CHOICE = "our_shared_pref";
     private Button registerAccount;
@@ -22,7 +22,7 @@ public class SignUpActivity extends AppCompatActivity {
         super.onCreate(instance);
         setContentView(R.layout.activity_sign_up);
         getSupportActionBar().setTitle("Wally");
-        pwdconfirm = findViewById(R.id.passwordConfirmation);
+        confirm = findViewById(R.id.passwordConfirmation);
         registerAccount = findViewById(R.id.makeAccount);
         enterName = findViewById(R.id.nameofuser);
         pwd = findViewById(R.id.password);
@@ -32,7 +32,7 @@ public class SignUpActivity extends AppCompatActivity {
             public void onClick(View c) {
                 String name = enterName.getText().toString();
                 String password = pwd.getText().toString();
-                String pwdConfirm = pwdconfirm.getText().toString();
+                String pwdConfirm = confirm.getText().toString();
 
             if(password.equals(pwdConfirm)){
                 SharedPreferences credentials = getSharedPreferences(CHOICE, Context.MODE_PRIVATE);
