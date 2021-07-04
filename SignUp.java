@@ -11,11 +11,9 @@ import android.content.Context;
 
 public class SignUpActivity extends AppCompatActivity {
 
-    private EditText confirm;
-    private EditText enterName;
-    private final String CHOICE = "our_shared_pref";
+    private EditText confirm, enterName, pwd;
     private Button registerAccount;
-    private EditText pwd;
+
 
     @Override
     protected void onCreate(Bundle instance) {
@@ -30,17 +28,17 @@ public class SignUpActivity extends AppCompatActivity {
         registerAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View c) {
-                String name = enterName.getText().toString();
-                String password = pwd.getText().toString();
-                String pwdConfirm = confirm.getText().toString();
+                String name;
+                String password;
+                String pwdConfirm;
+                name = enterName.getText().toString();
+                password = pwd.getText().toString();
+                pwdConfirm = confirm.getText().toString();
 
             if(password.equals(pwdConfirm)){
-                SharedPreferences credentials = getSharedPreferences(CHOICE, Context.MODE_PRIVATE);
-                SharedPreferences.Editor change;
-                change = credentials.edit();
+                SharedPreferences.Editor change = getSharedPreferences("our_shared_pref", Context.MODE_PRIVATE).edit();
                 change.putString("Username", name);
                 change.putString("Password", password);
-                change.commit();
                 SignUpActivity.this.finish();
 
             }
