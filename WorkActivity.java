@@ -3,35 +3,31 @@ package com.example.login;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.SearchView;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class WorkActivity extends AppCompatActivity {
-    RecyclerView recyclerView;
-    RecyclerAdapter2 recyclerAdapter;
+    RecyclerView rv;
+    RecyclerAdapter2 a;
 
-    List<String> workOpportunities;
-    List<String> websites;
-    List<String> descriptions;
+    List<String> workOpportunities, websites, descriptions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_work);
         getSupportActionBar().setTitle("Wally");
-        recyclerView = findViewById(R.id.recyclerview);
+        rv = findViewById(R.id.recyclerview);
         workOpportunities = new ArrayList<>();
         websites = new ArrayList<>();
         descriptions = new ArrayList<>();
-        recyclerAdapter = new RecyclerAdapter2(workOpportunities, websites, descriptions);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(recyclerAdapter);   
+        a = new RecyclerAdapter2(workOpportunities, websites, descriptions);
+        rv.setLayoutManager(new LinearLayoutManager(this));
+        rv.setAdapter(a);   
 
         workOpportunities.add("Customer Service Attendant I - City of Cupertino");
         workOpportunities.add("Sales Engineer at Edmund Optics ");
