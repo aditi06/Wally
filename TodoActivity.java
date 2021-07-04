@@ -16,28 +16,25 @@ import java.util.List;
 
 public class TodoActivity extends AppCompatActivity {
 
-    List<String> toDoList;
-    ArrayAdapter<String> a;
+    List<String> list;
     ListView l;
     EditText e;
+    ArrayAdapter<String> a;
    
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_todo);
-        getSupportActionBar().setTitle("Wally");
-
-        toDoList = new ArrayList<>();
-        a = new ArrayAdapter<>(this,R.layout.list_view_layout, toDoList);
+    protected void onCreate(Bundle instance) {
+        list = new ArrayList<>();
+        a = new ArrayAdapter<>(this,R.layout.list_view_layout, list);
         l = findViewById(R.id.id_list_view);
         l.setAdapter(a);
         e = findViewById(R.id.id_edit_text);
+        super.onCreate(instance);
+        setContentView(R.layout.activity_todo);
+        getSupportActionBar().setTitle("Wally");
+
     }
 
     public void add(View v){
-        toDoList.add(e.getText().toString());
-        e.setText("");
-        a.notifyDataSetChanged();
-
+        list.add(e.getText().toString());
     }
 }
